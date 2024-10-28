@@ -1,0 +1,209 @@
+/* src/pages/Home.css */
+.home-container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding-top: 4rem;
+}
+
+.main-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  transition: padding-top 0.3s ease;
+}
+
+.main-content.with-welcome {
+  padding-top: 2rem;
+}
+
+.main-content.without-welcome {
+  padding-top: 6rem;
+  
+}
+
+.welcome-section {
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: fadeOut 0.5s ease-in-out 4.5s forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+    margin-bottom: 3rem;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+    margin-bottom: 0;
+  }
+}
+
+.welcome-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-subtitle {
+  color: #6b7280;
+  font-size: 1.125rem;
+}
+
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.action-card {
+  background-color: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid #e5e7eb;
+  position: relative;
+  overflow: hidden;
+}
+
+.action-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.action-card:hover .action-icon-wrapper {
+  background-color: #f0f9ff;
+}
+
+.action-card:hover .action-icon {
+  color: #3b82f6;
+}
+
+.action-icon-wrapper {
+  background-color: #f3f4f6;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.action-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #4b5563;
+  transition: color 0.2s ease;
+}
+
+.action-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.action-description {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.meeting-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .meeting-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .quick-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.join-meeting-container {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+}
+
+.join-form {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.room-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.room-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.join-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.join-button:hover {
+  background-color: #2563eb;
+}
+
+.upcoming-meetings {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+}
+
+.meetings-list {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-meetings {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 640px) {
+  .join-form {
+    flex-direction: column;
+  }
+  
+  .join-button {
+    width: 100%;
+  }
+}

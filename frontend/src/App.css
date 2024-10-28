@@ -1,0 +1,40 @@
+/* src/App.css */
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+.navbar {
+  background-color: #282c34;
+  padding: 10px;
+}
+
+.navbar a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.video-call {
+  margin-top: 20px;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.video-container video {
+  width: 300px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+.chat-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  height: 200px;
+  overflow-y: auto;
+  margin-top: 10px;
+}
